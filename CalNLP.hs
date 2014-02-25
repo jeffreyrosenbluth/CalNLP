@@ -10,15 +10,12 @@ import      Control.Applicative       hiding ((<|>), optional)
 
 data Date =
   Date { month :: Int
-        , day   :: Int } deriving Show
+       , day   :: Int } deriving Show
 
 -- Utility functions ----------------------------------------------------------
 
-constA2 :: Applicative f => c -> f a -> f b -> f c
-constA2 r = liftA2 (\_ _ -> r)
-
-(<:>) :: Applicative f => f a -> f [a] -> f [a]
-(<:>) = liftA2 (:)
+const2 :: a -> (b -> c -> a)
+const2 r _ _ = r
 
 punc :: Stream s m Char => ParsecT s u m Char
 punc = char ',' <|> char '.'
@@ -30,14 +27,13 @@ delims = [skipMany1 punc, skipMany1 space, eof]
 
 -- Create a parser for the name of a month.
 mkMonthA :: Monad m => String -> Int -> ParsecT String u m Int
-mkMonthA name r = oneOf a1 <->> string a23 <* ending
+mkMonthA name r = const2 r <$> oneOf a1 <*> string a23 <* ending
   where
     a1 = toUpper a : toLower a : []
     a23 = take 2 . tail $ name
     ending = case drop 3 name of
       "" -> choice delims
       e  -> choice $ skipMany1 (string e) : delims
-    (<->>) = constA2 r
     a = head name
 
 -- | Parser for the name of the any month.
@@ -67,8 +63,7 @@ dayOfMonthN = do
     opt str = optional $ string str
 
 mkDayOfMonthA :: Monad m => String -> Int -> ParsecT String u m Int
-mkDayOfMonthA name r = string name <->> choice delims
-  where (<->>) = constA2 r
+mkDayOfMonthA name r = const2 r <$> string name <*> choice delims
 
 -- | Parser of a text day of month. We only support words up to the tenth
 --   day.
