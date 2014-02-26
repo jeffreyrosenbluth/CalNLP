@@ -9,6 +9,10 @@ import        Control.Monad
 import        Data.Char             (toUpper, toLower)
 import        Text.Parsec
 
+-- For Testing --------
+import        System.IO
+-----------------------
+
 data Date =
   Date { month :: Int
        , day   :: Int } deriving Show
@@ -115,6 +119,12 @@ parseDate = parseDateA <|> parseDateN
 
 -------------------------------------------------------------------------------
 
-main = forever $ do putStrLn "Enter a string: "
-                    input <- getLine
-                    putStrLn . show $ find parseDate input
+main = do
+    withFile "testdata.txt" ReadMode
+      ( \handle -> do
+          contents <- hGetContents handle
+          let testStrings = lines contents
+              results = map (find parseDate) testStrings
+              rs = zip [1..141] results
+          mapM (putStrLn . show) rs
+      )

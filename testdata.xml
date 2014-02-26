@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Grocery shopping at King Kullen Thursday at 11:30pm</key>
+  <string>Grocery shopping|King Kullen|thursday|11:30 PM|friday|12:30 AM|0|none</string>
+  <key>Grocery shopping at Waldbaums from 4pm to 5pm</key>
+  <string>Grocery shopping|Waldbaums||04:00 PM||05:00 PM|0|none</string>
+  <key>Clothes shopping Wednesday at 5:35pm at Nordstroms</key>
+  <string>Clothes shopping|Nordstroms|wednesday|05:35 PM|wednesday|06:35 PM|0|none</string>
+  <key>Clothes shopping at Nordstroms in a month at 17:45</key>
+  <string>Clothes shopping|Nordstroms|0+0+1+0|05:45 PM|0+0+1+0|06:45 PM|0|none</string>
+  <key>Clothes shopping at Nordstroms next Thursday at 5p</key>
+  <string>Clothes shopping|Nordstroms|nextthursday|05:00 PM|nextthursday|06:00 PM|0|none</string>
+  <key>Clothes shopping at Nordstroms tomorrow at 0600</key>
+  <string>Clothes shopping|Nordstroms|1+0+0+0|06:00 AM|1+0+0+0|07:00 AM|0|none</string>
+  <key>Clothes shopping at Nordstroms thursday to saturday</key>
+  <string>Clothes shopping|Nordstroms|thursday|12:00 AM|saturday|12:00 AM|1|none</string>
+  <key>Clothes shopping at Nordstroms 23 sep in an hour</key>
+  <string>Clothes shopping|Nordstroms|09-23-13|1+0|09-23-13|2+0|0|none</string>
+  <key>Shopping at Nordstroms 2 weeks from tomorrow in an hour</key>
+  <string>Shopping|Nordstroms|1+2+0+0|1+0|1+2+0+0|2+0|0|none</string>
+  <key>Family vacation from 8/9-8/18</key>
+  <string>Family vacation||08-09-13|12:00 AM|08-18-13|12:00 AM|1|none</string>
+  <key>Family vacation from 8/1-8 at The Sandy Lane</key>
+  <string>Family vacation|The Sandy Lane|08-01-13|12:00 AM|08-08-13|12:00 AM|0|none</string>
+  <key>Family vacation from 8/9-18 at The Sandy Lane</key>
+  <string>Family vacation|The Sandy Lane|08-09-13|12:00 AM|08-18-13|12:00 AM|1|none</string>
+  <key>Family vacation from August 9th-18th in Mexico</key>
+  <string>Family vacation|Mexico|08-09-13|12:00 AM|08-18-13|12:00 AM|1|none</string>
+  <key>Family vacation from August 9th-18 in Mexico</key>
+  <string>Family vacation|Mexico|08-09-13|12:00 AM|08-18-13|12:00 AM|1|none</string>
+  <key>Family vacation from August 9-18 at The Marriot Hotel</key>
+  <string>Family vacation|The Marriot Hotel|08-09-13|12:00 AM|08-18-13|12:00 AM|1|none</string>
+  <key>Soccer practice every Tuesday at noon</key>
+  <string>Soccer practice||tuesday|12:00 PM|tuesday|01:00 PM|0|week</string>
+  <key>Soccer practice next week at 6am at JFK High School</key>
+  <string>Soccer practice|JFK High School|0+1+0+0|06:00 AM|0+1+0+0|07:00 AM|0|none</string>
+  <key>Soccer practice next month at 6am at JFK High School</key>
+  <string>Soccer practice|JFK High School|0+0+1+0|06:00 AM|0+0+1+0|07:00 AM|0|none</string>
+  <key>Soccer practice at JFK High School every Tuesday at 6</key>
+  <string>Soccer practice|JFK High School|tuesday|06:00 PM|tuesday|07:00 PM|0|week</string>
+  <key>Sams birthday every year on 5/16</key>
+  <string>Sams birthday||05-16-13|12:00 AM|05-16-13|12:00 AM|1|year</string>
+  <key>Lunch with John in Cupertino on Thursday from 11-1:30pm</key>
+  <string>Lunch with John|Cupertino|thursday|11:00 AM|thursday|01:30 PM|0|none</string>
+  <key>Lunch with John in Cupertino on Thursday from 11-1:30 pm</key>
+  <string>Lunch with John|Cupertino|thursday|11:00 AM|thursday|01:30 PM|0|none</string>
+  <key>Lunch with John in Cupertino on Thursday @12</key>
+  <string>Lunch with John|Cupertino|thursday|12:00 PM|thursday|01:00 PM|0|none</string>
+  <key>12p to 2p on May 5th, committee meeting</key>
+  <string>committee meeting||05-05-13|12:00 PM|05-05-13|02:00 PM|0|none</string>
+  <key>12p to 2p on 5th of may, committee meeting</key>
+  <string>committee meeting||05-05-13|12:00 PM|05-05-13|02:00 PM|0|none</string>
+  <key>12p to 2p on May 5th, committee meeting at 559 Madison Ave.</key>
+  <string>committee meeting|559 Madison Ave|05-05-13|12:00 PM|05-05-13|02:00 PM|0|none</string>
+  <key>23rd of May at 2000, Dinner with Andre</key>
+  <string>Dinner with Andre||05-23-13|08:00 PM|05-23-13|09:00 PM|0|none</string>
+  <key>May 23rd at 8:00p, Dinner with Andre at Toku</key>
+  <string>Dinner with Andre|Toku|05-23-13|08:00 PM|05-23-13|09:00 PM|0|none</string>
+  <key>February 24 at 3pm - 4:40pm March 3,  Retreat at Hilton Hotel</key>
+  <string>Retreat|Hilton Hotel|02-24-14|03:00 PM|03-03-14|04:40 PM|0|none</string>
+  <key>Vacation is in 4 weeks...</key>
+  <string>Vacation||0+4+0+0|12:00 AM|0+4+0+0|12:00 AM|1|none</string>
+  <key>Christmas is on December 25th.</key>
+  <string>Christmas||12-25-13|12:00 AM|12-25-13|12:00 AM|1|none</string>
+  <key>Homework 5 due next monday at 3 o&apos;clock at 3 Towne Hall</key>
+  <string>Homework 5 due|3 Towne Hall|nextmonday|03:00 PM|nextmonday|04:00 PM|0|none</string>
+  <key>Homework 5 due next sunday at 3 Towne Hall at 3pm</key>
+  <string>Homework 5 due|3 Towne Hall|nextsunday|03:00 PM|nextsunday|04:00 PM|0|none</string>
+  <key>Homework 5 due next monday at 3 Towne Hall at 3</key>
+  <string>Homework 5 due|3 Towne Hall|nextmonday|03:00 PM|nextmonday|04:00 PM|0|none</string>
+  <key>The retreat is from Jan 12 - 29. at The Beach House</key>
+  <string>The retreat|The Beach House|01-12-14|12:00 AM|01-29-14|12:00 AM|1|none</string>
+  <key>Bake a cake tomorrow.</key>
+  <string>Bake a cake||1+0+0+0|12:00 AM|1+0+0+0|12:00 AM|1|none</string>
+  <key>Use Horizon today!</key>
+  <string>Use Horizon|||12:00 AM||12:00 AM|1|none</string>
+  <key>Use Horizon! today</key>
+  <string>Use Horizon!|||12:00 AM||12:00 AM|1|none</string>
+  <key>At arena 2:00pm Football Game</key>
+  <string>Football Game|arena||02:00 PM||03:00 PM|0|none</string>
+  <key>Staff meeting on Monday at 9 am in conference room</key>
+  <string>Staff meeting|conference room|monday|09:00 AM|monday|10:00 AM|0|none</string>
+  <key>Project meeting with Jason 4 pm tomorrow at coffee shop</key>
+  <string>Project meeting with Jason|coffee shop|1+0+0+0|04:00 PM|1+0+0+0|05:00 PM|0|none</string>
+  <key>Let&apos;s have lunch at Joe&apos;s on the 3rd.</key>
+  <string>Let&apos;s have lunch|Joe&apos;s|05-03-13|12:00 AM|05-03-13|12:00 AM|1|none</string>
+  <key>Boys ski trip at Victor&apos;s from the 3rd to the 6th</key>
+  <string>Boys ski trip|Victor&apos;s|05-03-13|12:00 AM|05-06-13|12:00 AM|1|none</string>
+  <key>The exam is in 3 weeks from tomorrow.</key>
+  <string>The exam||1+3+0+0|12:00 AM|1+3+0+0|12:00 AM|1|none</string>
+  <key>The exam is three weeks from tomorrow.</key>
+  <string>The exam||1+3+0+0|12:00 AM|1+3+0+0|12:00 AM|1|none</string>
+  <key>The exam is @ 2pm and lasts for five hours</key>
+  <string>The exam|||02:00 PM||07:00 PM|0|none</string>
+  <key>The koala will be set free on the fourth of july @noon</key>
+  <string>The koala will be set free||07-04-13|12:00 PM|07-04-13|01:00 PM|0|none</string>
+  <key>My mom&apos;s birthday is on the 27th</key>
+  <string>My mom&apos;s birthday||04-27-13|12:00 AM|04-27-13|12:00 AM|1|none</string>
+  <key>The biology exam is @ 2pm and goes until 4pm</key>
+  <string>The biology exam|||02:00 PM||04:00 PM|0|none</string>
+  <key>on the 5th to the ninth, we shall eat lobster.</key>
+  <string>we shall eat lobster||04-05-13|12:00 AM|04-09-13|12:00 AM|1|none</string>
+  <key>Meeting on the 5th at City Center</key>
+  <string>Meeting|City Center|04-05-13|12:00 AM|04-05-13|12:00 AM|1|none</string>
+  <key>on the 5th to the 9th, we shall eat lobster.</key>
+  <string>we shall eat lobster||04-05-13|12:00 AM|04-09-13|12:00 AM|1|none</string>
+  <key>The conference is from Feb 12 at 3pm to the 15th.</key>
+  <string>The conference||02-12-14|03:00 PM|02-15-14|12:00 AM|0|none</string>
+  <key>Birthday party from midnight to noon on March fourth</key>
+  <string>Birthday party||03-05-14|12:00 AM|03-05-14|12:00 PM|0|none</string>
+  <key>Birthday party from midnight to noon on the fourth of March</key>
+  <string>Birthday party||03-05-14|12:00 AM|03-05-14|12:00 PM|0|none</string>
+  <key>High school admission results in 1 week</key>
+  <string>High school admission results||0+1+0+0|12:00 AM|0+1+0+0|12:00 AM|1|none</string>
+  <key>Lunch with John at 123 Main Street on Tuesday</key>
+  <string>Lunch with John|123 Main Street|tuesday|12:00 AM|tuesday|12:00 AM|1|none</string>
+  <key>Dinner at 6</key>
+  <string>Dinner|||06:00 PM||07:00 PM|0|none</string>
+  <key>Pick up Joe tomorrow at LAX at 8pm</key>
+  <string>Pick up Joe|LAX|1+0+0+0|08:00 PM|1+0+0+0|09:00 PM|0|none</string>
+  <key>Pick up Joe the day after tomorrow at LAX at 8pm</key>
+  <string>Pick up Joe the|LAX|2+0+0+0|08:00 PM|2+0+0+0|09:00 PM|0|none</string>
+  <key>Cycling class @6 for 1.5h</key>
+  <string>Cycling class|||06:00 PM||07:30 PM|0|none</string>
+  <key>Next Tuesday Jogging in the Park @8a for 90 min</key>
+  <string>Jogging|the Park|nexttuesday|08:00 AM|nexttuesday|09:30 AM|0|none</string>
+  <key>Trip to Turkey first of july through 5th of aug</key>
+  <string>Trip to Turkey||07-01-13|12:00 AM|08-05-13|12:00 AM|1|none</string>
+  <key>Trip to Turkey July 1 through 5th of aug</key>
+  <string>Trip to Turkey||07-01-13|12:00 AM|08-05-13|12:00 AM|1|none</string>
+  <key>Party Tuesday at Rob&apos;s House, 7-11p</key>
+  <string>Party|Rob&apos;s House|tuesday|07:00 PM|tuesday|11:00 PM|0|none</string>
+  <key>Lunch with Matthew at 123 Main St. at 1:30 Monday</key>
+  <string>Lunch with Matthew|123 Main St|monday|01:30 PM|monday|02:30 PM|0|none</string>
+  <key>Sam&apos;s birthday every year on 5/16</key>
+  <string>Sam&apos;s birthday||05-16-13|12:00 AM|05-16-13|12:00 AM|1|year</string>
+  <key>Lunch every Tuesday until 2/5</key>
+  <string>Lunch||tuesday|12:00 AM|02-05-14|12:00 AM|1|week</string>
+  <key>Final project due August 15</key>
+  <string>Final project due||08-15-13|12:00 AM|08-15-13|12:00 AM|1|none</string>
+  <key>Finish important task by Thursday!!</key>
+  <string>Finish important task||thursday|12:00 AM|thursday|12:00 AM|1|none</string>
+  <key>Paper due next Wednesday</key>
+  <string>Paper due||nextwednesday|12:00 AM|nextwednesday|12:00 AM|1|none</string>
+  <key>Exam on February 27th at 5pm</key>
+  <string>Exam||02-27-14|05:00 PM|02-27-14|06:00 PM|0|none</string>
+  <key>Meeting at Noon next Thursday</key>
+  <string>Meeting||nextthursday|12:00 PM|nextthursday|01:00 PM|0|none</string>
+  <key>Picnic in Central Park next week on Monday at 11am</key>
+  <string>Picnic|Central Park|nextmonday|11:00 AM|nextmonday|12:00 PM|0|none</string>
+  <key>Buy milk tomorrow 5 to 6</key>
+  <string>Buy milk||1+0+0+0|05:00 PM|1+0+0+0|06:00 PM|0|none</string>
+  <key>Meet with Cody at Apple Store, Viterbo tomorrow from 5 to 6</key>
+  <string>Meet with Cody|Apple Store, Viterbo|1+0+0+0|05:00 PM|1+0+0+0|06:00 PM|0|none</string>
+  <key>Meet with Cody tomorrow at Apple Store, Viterbo from 5 to 6</key>
+  <string>Meet with Cody|Apple Store, Viterbo|1+0+0+0|05:00 PM|1+0+0+0|06:00 PM|0|none</string>
+  <key>Meet with Cody tomorrow 5 to 6 at Apple Store, Viterbo</key>
+  <string>Meet with Cody|Apple Store, Viterbo|1+0+0+0|05:00 PM|1+0+0+0|06:00 PM|0|none</string>
+  <key>Dinner with Rhiannon tomorrow 7pm at New Gen Sushi</key>
+  <string>Dinner with Rhiannon|New Gen Sushi|1+0+0+0|07:00 PM|1+0+0+0|08:00 PM|0|none</string>
+  <key>Brendan&apos;s 6th birthday party January 22 at 11:00 at our house.</key>
+  <string>Brendan&apos;s 6th birthday party|our house|01-22-14|11:00 AM|01-22-14|12:00 PM|0|none</string>
+  <key>Meeting from 5 - 6</key>
+  <string>Meeting|||05:00 PM||06:00 PM|0|none</string>
+  <key>Meeting at 5 - 6 at Warren Weaver Hall, Rm 1306</key>
+  <string>Meeting|Warren Weaver Hall, Rm 1306||05:00 PM||06:00 PM|0|none</string>
+  <key>Meeting at 5 - 6 at Warren Weaver Hall</key>
+  <string>Meeting|Warren Weaver Hall||05:00 PM||06:00 PM|0|none</string>
+  <key>Meeting at 5-630p</key>
+  <string>Meeting|||05:00 PM||06:30 PM|0|none</string>
+  <key>Meeting at 5-630</key>
+  <string>Meeting|||05:00 PM||06:30 PM|0|none</string>
+  <key>Fondue at Fondue Palace at seven thirty pm</key>
+  <string>Fondue|Fondue Palace||07:30 PM||08:30 PM|0|none</string>
+  <key>Fondue at seven o&apos;clock at Fondue Palace</key>
+  <string>Fondue|Fondue Palace||07:00 PM||08:00 PM|0|none</string>
+  <key>Fondue at Fondue Palace at seven thirty</key>
+  <string>Fondue|Fondue Palace||07:30 PM||08:30 PM|0|none</string>
+  <key>Fondue at seven at Fondue Palace</key>
+  <string>Fondue|Fondue Palace||07:00 PM||08:00 PM|0|none</string>
+  <key>Fondue at 7 at Fondue Palace</key>
+  <string>Fondue|Fondue Palace||07:00 PM||08:00 PM|0|none</string>
+  <key>Dinner with Rocko at Main Street from 6 to 7</key>
+  <string>Dinner with Rocko|Main Street||06:00 PM||07:00 PM|0|none</string>
+  <key>Dinner at 45 Hilldale Lane, Port Washington, NY, United States from 6 to 8</key>
+  <string>Dinner|45 Hilldale Lane, Port Washington, NY, United States||06:00 PM||08:00 PM|0|none</string>
+  <key>Lunch with Preshit tomorrow at 8 PM until 11:20</key>
+  <string>Lunch with Preshit||1+0+0+0|08:00 PM|1+0+0+0|11:20 PM|0|none</string>
+  <key>Lunch with Preshit tomorrow at 8 until 11:20</key>
+  <string>Lunch with Preshit||1+0+0+0|08:00 AM|1+0+0+0|11:20 AM|0|none</string>
+  <key>Lunch with Preshit tomorrow at about 8 till 11:20</key>
+  <string>Lunch with Preshit||1+0+0+0|08:00 AM|1+0+0+0|11:20 AM|0|none</string>
+  <key>Ski Corbet&apos;s Couloir tomorrow morning at 8</key>
+  <string>Ski Corbet&apos;s Couloir||1+0+0+0|08:00 AM|1+0+0+0|09:00 AM|0|none</string>
+  <key>Graduate Computer Graphics at NYU, West 4th St., New York, from 5 - 7</key>
+  <string>Graduate Computer Graphics|NYU, West 4th St., New York||05:00 PM||07:00 PM|0|none</string>
+  <key>Graduate Computer Graphics at NYU, 16 East 4th Street, New York, from 5 - 7</key>
+  <string>Graduate Computer Graphics|NYU, 16 East 4th Street, New York||05:00 PM||07:00 PM|0|none</string>
+  <key>At Laguna Beach, CA, United States, surfing lessons every tuesday at 0800</key>
+  <string>surfing lessons|Laguna Beach, CA, United States|tuesday|08:00 AM|tuesday|09:00 AM|0|week</string>
+  <key>Star gazing with Jen at the Custer Observatory, Southold, NY on Saturday from 10-11pm</key>
+  <string>Star gazing with Jen|the Custer Observatory, Southold, NY|saturday|10:00 PM|saturday|11:00 PM|0|none</string>
+  <key>WWDC 2013 at Moscone West, San Fransisco, CA June 11th to 15th</key>
+  <string>WWDC 2013|Moscone West, San Fransisco, CA|06-11-13|12:00 AM|06-15-13|12:00 AM|1|none</string>
+  <key>dec 1 at 3pm - 11</key>
+  <string>||12-01-13|03:00 PM|12-01-13|11:00 PM|0|none</string>
+  <key>I work from 1am - 6pm</key>
+  <string>I work|||01:00 AM||06:00 PM|0|none</string>
+  <key>dec 1st at 9am through dec fifth 8pm</key>
+  <string>||12-01-13|09:00 AM|12-05-13|08:00 PM|0|none</string>
+  <key>Lunch with becca at cafe thu 1-2</key>
+  <string>Lunch with becca|cafe|thursday|01:00 PM|thursday|02:00 PM|0|none</string>
+  <key>lunch with John at &quot;Taco Tuesdays&quot; Friday 12 pm</key>
+  <string>lunch with John|Taco Tuesdays|friday|12:00 PM|friday|01:00 PM|0|none</string>
+  <key>Volleyball at 5pm</key>
+  <string>Volleyball|||05:00 PM||06:00 PM|0|none</string>
+  <key>Bank holiday 8/14</key>
+  <string>Bank holiday||08-14-13|12:00 AM|08-14-13|12:00 AM|1|none</string>
+  <key>Staff meeting next Monday at 13:00</key>
+  <string>Staff meeting||nextmonday|01:00 PM|nextmonday|02:00 PM|0|none</string>
+  <key>Running w/ Pat 2:15 tomorrow for 45 minutes</key>
+  <string>Running w/ Pat||1+0+0+0|02:15 PM|1+0+0+0|03:00 PM|0|none</string>
+  <key>Running w/ Pat 2:15 - 3 pm tomorrow</key>
+  <string>Running w/ Pat||1+0+0+0|02:15 PM|1+0+0+0|03:00 PM|0|none</string>
+  <key>National Conference 9/23 - 9/26 in Atlanta</key>
+  <string>National Conference|Atlanta|09-23-13|12:00 AM|09-26-13|12:00 AM|1|none</string>
+  <key>Meeting at work every Monday at 2pm</key>
+  <string>Meeting|work|monday|02:00 PM|monday|03:00 PM|0|week</string>
+  <key>Tennis practice Tuesday 7pm to 9pm weekly</key>
+  <string>Tennis practice||tuesday|07:00 PM|tuesday|09:00 PM|0|week</string>
+  <key>Manicure on 9/1 every month</key>
+  <string>Manicure||09-01-13|12:00 AM|09-01-13|12:00 AM|1|month</string>
+  <key>Mom&apos;s birthday June 19 yearly</key>
+  <string>Mom&apos;s birthday||06-19-13|12:00 AM|06-19-13|12:00 AM|1|year</string>
+  <key>Wedding anniversary July 3 yearly</key>
+  <string>Wedding anniversary||07-03-13|12:00 AM|07-03-13|12:00 AM|1|year</string>
+  <key>Baseball Game every Thursday for 10 weeks</key>
+  <string>Baseball Game||thursday|12:00 AM|0+10+0+0|12:00 AM|1|week</string>
+  <key>Language Class every Wednesday 7-8pm for 5 months</key>
+  <string>Language Class||wednesday|07:00 PM|0+0+5+0|08:00 PM|0|week</string>
+  <key>Appointment at Somewhere on June 3rd 10am-10:25am</key>
+  <string>Appointment|Somewhere|06-03-13|10:00 AM|06-03-13|10:25 AM|0|none</string>
+  <key>Lunch tomorrow 15:00 in room 2</key>
+  <string>Lunch|room 2|1+0+0+0|03:00 PM|1+0+0+0|04:00 PM|0|none</string>
+  <key>Lunch with English Project Team at Fountain Dining Hall 12:15pm Thursday</key>
+  <string>Lunch with English Project Team|Fountain Dining Hall|thursday|12:15 PM|thursday|01:15 PM|0|none</string>
+  <key>Test event on 3/13 at 245 until 4 at 666 Main Street</key>
+  <string>Test event|666 Main Street|03-13-14|02:45 PM|03-13-14|04:00 PM|0|none</string>
+  <key>Conference call Mondays at 9am from 3/26 thru 4/16</key>
+  <string>Conference call||04-01-13|09:00 AM|04-16-13|10:00 AM|0|week</string>
+  <key>Workout at Power 10 Thursdays at 11:30</key>
+  <string>Workout|Power 10|thursday|11:30 AM|thursday|12:30 PM|0|week</string>
+  <key>Call John Bates to apologize tomorrow at 9</key>
+  <string>Call John Bates to apologize||1+0+0+0|09:00 AM|1+0+0+0|10:00 AM|0|none</string>
+  <key>Call John Bates with apology tomorrow at 9</key>
+  <string>Call John Bates with apology||1+0+0+0|09:00 AM|1+0+0+0|10:00 AM|0|none</string>
+  <key>lunch with Kohli tomorrow at 4 to 8 am</key>
+  <string>lunch with Kohli||1+0+0+0|04:00 AM|1+0+0+0|08:00 AM|0|none</string>
+  <key>Tennis with David and Shaun saturdays at 10:30</key>
+  <string>Tennis with David and Shaun||saturday|10:30 AM|saturday|11:30 AM|0|week</string>
+  <key>Tennis with David saturdays at 10:30</key>
+  <string>Tennis with David||saturday|10:30 AM|saturday|11:30 AM|0|week</string>
+  <key>Finish working on the platter in an hour at home</key>
+  <string>Finish working on the platter|home||1+0||2+0|0|none</string>
+  <key>Meeting with Johnny, Marco, and Alexandri to talk about the research 5pm tomorrow</key>
+  <string>Meeting with Johnny, Marco, and Alexandri to talk about the research||1+0+0+0|05:00 PM|1+0+0+0|06:00 PM|0|none</string>
+  <key>At the plaza, every monday talk to Joe about money laundering at 6:30Pm to 1:15</key>
+  <string>talk to Joe about money laundering|the plaza|monday|06:30 PM|tuesday|01:15 AM|0|week</string>
+  <key>Dinner with Ben Kerwing 2 weeks from wednesday at Lupa from 7 to 9</key>
+  <string>Dinner with Ben Kerwing|Lupa|1+2+0+0|07:00 PM|1+2+0+0|09:00 PM|0|none</string>
+  <key>Dinner with Ben Kerwing two weeks from wednesday at Lupa from 7 to 9</key>
+  <string>Dinner with Ben Kerwing|Lupa|1+2+0+0|07:00 PM|1+2+0+0|09:00 PM|0|none</string>
+  <key>dinner with Erin tomorrow evening</key>
+  <string>dinner with Erin||1+0+0+0|06:00 PM|1+0+0+0|07:00 PM|0|none</string>
+  <key>Meeting this evening</key>
+  <string>Meeting||0+0+0+0|06:00 PM|0+0+0+0|07:00 PM|0|none</string>
+  <key>at Los Angeles, CA, United States, from 5-6 test with paul</key>
+  <string>test with paul|Los Angeles, CA, United States|0+0+0+0|05:00 PM|0+0+0+0|06:00 PM|0|none</string>
+  <key>at Los Angeles, CA, United States, from 5 to 6 test with paul</key>
+  <string>test with paul|Los Angeles, CA, United States|0+0+0+0|05:00 PM|0+0+0+0|06:00 PM|0|none</string>
+  <key>at ©Savatore&apos;s Pizzeria, Shore Road, Port Washington, NY© Dinner</key>
+  <string>Dinner|Savatore&apos;s Pizzeria, Shore Road, Port Washington, NY||12:00 AM||12:00 AM|1|none</string>
+  <key>Brunch for Auntie&apos;s birthday in Williamsburg April 28th at 12:00p</key>
+  <string>Brunch for Auntie&apos;s birthday|Williamsburg|04-28-13|12:00 PM|04-28-13|01:00 PM|0|none</string>
+</dict>
+</plist>
