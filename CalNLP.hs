@@ -131,6 +131,15 @@ parseDateA = Date <$> monthsA
                   <*> dayOfMonth
                    <* delim
 
+-- We throw away the year.
+parseYear :: Parser ()
+parseYear = do
+  s <- many1 digit
+  let n = read s :: Int
+  if n < 2014 && n < 2099
+    then return ()
+    else parserFail "Not a year"
+
 -- | Date in numeric form, e.g. 02/26/14---------------------------------------
 parseDateN :: Parser Date
 parseDateN = do
