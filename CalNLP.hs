@@ -7,8 +7,12 @@ import           Control.Applicative   (Applicative(..), (<$>), (<*>), (<$))
 import           Control.Arrow         (first)
 import           Control.Monad
 import           Data.Char             (toUpper, toLower)
+import           Data.List             (foldl')
+import           Data.Semigroup        hiding (option)
 import           Data.Time
 import           Text.Parsec
+import           Text.Parsec.Error
+import           Text.Parsec.Pos       (initialPos)
 import           Text.Parsec.String
 
 -- For Testing ----------------------------------------------------------------
@@ -22,6 +26,11 @@ data Date =
   Date { month :: Int
        , day   :: Int } deriving Show
 
+-- We want to collect the errors of multiple passes of parser starting at each
+-- position in the input string.
+instance Semigroup ParseError where
+  e1 <> e2 = foldl' (flip addErrorMessage) e1 (errorMessages e2)
+
 -- Utility functions ----------------------------------------------------------
 
 delim :: Parser ()
@@ -33,18 +42,14 @@ punc = char ',' <|> char '.' <|> space
 -- | Return the parse of the first substring that parses successfully and the
 --   input 'String' with the match removed.
 find :: Parser b -> String -> (Either ParseError b, String)
-find p s = find' p s ""
+find p s = find' p s "" (newErrorUnknown $ initialPos "")
   where
-    find' p s accum =
+    find' p s accum errs =
       case parse ((,) <$> p <*> getInput) "" s of
-        -- XXX What to do here? it would be cumbersome to accumulate all of
-        -- the errors from each attempt, giving a potentially long and
-        -- confustng error. On the other hand just return the error from the
-        -- last attempt is useless.
         Left err ->
           case s of
-            [] -> (Left err, s)
-            (x:xs) -> find' p xs (x : accum)
+            [] -> (Left (errs <> err), s)
+            (x:xs) -> find' p xs (x : accum) (errs <> err)
         Right (y, str) -> (Right y, (reverse accum) ++ str)
 
 -- Given today's date, a month and a year return the first date in the future
@@ -124,20 +129,20 @@ dayOfMonthA = choice . map try $ zipWith mkDayOfMonthA numth [1..10]
 dayOfMonth :: Parser Int
 dayOfMonth = dayOfMonthN <|> dayOfMonthA
 
--- | Parse a date, i.e a month and day of the month. We do not need the year.
+-- | Parse a date, where the month is a word.
 parseDateA :: Parser Date
 parseDateA = Date <$> monthsA
                    <* delim
                   <*> dayOfMonth
                    <* delim
+                   <* optional (try parseYearA <* delim)
 
--- We throw away the year.
-parseYear :: Parser ()
-parseYear = do
+parseYearA :: Parser Int
+parseYearA = do
   s <- many1 digit
   let n = read s :: Int
-  if n < 2014 && n < 2099
-    then return ()
+  if n > 2014 && n < 2099
+    then return n
     else parserFail "Not a year"
 
 -- | Date in numeric form, e.g. 02/26/14---------------------------------------
@@ -146,10 +151,10 @@ parseDateN = do
   ns <- sepBy1 (many1 digit) (char '/')
   let dm = map read ns :: [Int]
   case dm of
-    (x:[])  -> parserFail "Need both month and day"
+    (x:[])  -> parserZero
     (m:d:_) -> if (m > 0) && (m <= 12) && (d > 0) && (d <= 31)
                then return (Date m d)
-               else parserFail "Month of day out of range"
+               else parserFail "Month or day out of range"
 
 parseDate :: Parser Date
 parseDate = parseDateA <|> parseDateN
