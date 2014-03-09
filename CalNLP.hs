@@ -8,6 +8,7 @@ import           Control.Arrow         (first)
 import           Control.Monad
 import           Data.Char             (toUpper, toLower)
 import           Data.List             (foldl')
+import           Data.Maybe            (fromJust)
 import           Data.Semigroup        hiding (option)
 import           Data.Time
 import           Text.Parsec
@@ -24,7 +25,8 @@ today = fromGregorian 2014 2 27
 
 data Date =
   Date { month :: Int
-       , day   :: Int } deriving Show
+       , day   :: Int
+       , year  :: Maybe Integer } deriving Show
 
 -- We want to collect the errors of multiple passes of parser starting at each
 -- position in the input string.
@@ -66,6 +68,11 @@ impliedYear today m d =
     (yyyy, mm, dd) = toGregorian today
     dateGuess = fromGregorianValid (yyyy) m d
 
+validDay :: Int -> Bool
+validDay d = (d > 0) && (d <= 31)
+
+validMonth :: Int -> Bool
+validMonth m = (m > 0) && (m <= 12)
 
 -- Date words -----------------------------------------------------------------
 
@@ -82,12 +89,20 @@ numth :: [String]
 numth = [ "first", "second", "third", "fourth", "fifth"
         , "sixth", "seventh", "eighth", "nineth", "tenth"]
 
-days :: [String]
-days = [ "mon", "monday", "tue", "tues", "tuesday", "wed", "wednesday"
-       , "thu", "thurs", "thursday", "fri", "friday", "sat", "saturday"
-       , "sun", "sunday"]
+weekDays :: [(String, Int)]
+weekDays = [ ("mon", 2), ("monday", 2), ("tue", 3), ("tues", 3), ("tuesday", 3)
+           , ("wed", 4), ("wednesday", 4), ("thu", 5), ("thurs", 5)
+           , ("thursday", 5), ("fri", 6), ("friday", 6), ("sat", 7)
+           , ("saturday", 7), ("sun", 1) , ("sunday", 1) ]
 
--- Months ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-- Weekdays.
+mkWeekday :: String -> Parser Int
+mkWeekday d = (fromJust . flip lookup weekDays) <$> string d <* delim
+
+parseWeekday :: Parser Int
+parseWeekday = choice $  map (try . mkWeekday . fst) weekDays
 
 -- Create a parser for the name of a month. Return the month number.
 mkMonthA :: String -> Int -> Parser Int
@@ -99,8 +114,6 @@ mkMonthA name r = r <$ oneOf a <* string a23 <* (option "" $ string as)
 -- | Parser for the name of the any month. Return the month number.
 monthsA :: Parser Int--Monad m => ParsecT String u m Int
 monthsA = choice . map try $ zipWith mkMonthA months [1..12]
-
--- Days of the Month ----------------------------------------------------------
 
 -- | Parser for numeric day of month. Return the day as an 'Int'.
 dayOfMonthN :: Parser Int
@@ -129,42 +142,81 @@ dayOfMonthA = choice . map try $ zipWith mkDayOfMonthA numth [1..10]
 dayOfMonth :: Parser Int
 dayOfMonth = dayOfMonthN <|> dayOfMonthA
 
+parseYearA :: Parser (Maybe Integer)
+parseYearA = (Just . read) <$> many1 digit
+
 -- | Parse a date, where the month is a word.
 parseDateA :: Parser Date
-parseDateA = Date <$> monthsA
-                   <* delim
-                  <*> dayOfMonth
-                   <* delim
-                   <* optional (try parseYearA <* delim)
+parseDateA = try $ Date
+               <$> monthsA
+                <* delim
+               <*> dayOfMonth
+                <* delim
+               <*> option Nothing (try (parseYearA <* delim))
 
-parseYearA :: Parser Int
-parseYearA = do
-  s <- many1 digit
-  let n = read s :: Int
-  if n > 2014 && n < 2099
-    then return n
-    else parserFail "Not a year"
+-- | Parse a backwards date, like 23rd of May.
+parseDateB :: Parser Date
+parseDateB = try $ bdate
+               <$> dayOfMonth
+                <* spaces <* string "of" <* spaces
+               <*> monthsA
+                <* delim
+               <*> option Nothing (try (parseYearA <* delim))
+  where
+    bdate d m y = Date m d y
 
--- | Date in numeric form, e.g. 02/26/14---------------------------------------
+-- | Date in numeric form, e.g. 02/26/14
 parseDateN :: Parser Date
-parseDateN = do
+parseDateN = try $ do
   ns <- sepBy1 (many1 digit) (char '/')
   let dm = map read ns :: [Int]
   case dm of
-    (x:[])  -> parserZero
-    (m:d:_) -> if (m > 0) && (m <= 12) && (d > 0) && (d <= 31)
-               then return (Date m d)
-               else parserFail "Month or day out of range"
+    (x:[])      -> parserZero
+    (m:d:[])    -> if (validMonth m) && (validDay d)
+                   then return (Date m d Nothing)
+                   else parserFail "Month or day out of range"
+    (m:d:y:[])  -> if  (validMonth m) && (validDay d)
+                   then return (Date m d (Just $ fromIntegral y))
+                   else parserFail "Month or day out of range"
+    _           -> parserFail "Too many slashes"
 
+-- Full Parsers ---------------------------------------------------------------
+
+-- | Parse a full date. 'parseDateN' must come before 'parseDateB'
 parseDate :: Parser Date
-parseDate = parseDateA <|> parseDateN
+parseDate = parseDateA <|> parseDateB <|> parseDateN
 
 -------------------------------------------------------------------------------
 
-main = do
+fromRight (e, s) = either (const "") show e ++ " ::: " ++ s
+
+correct = do
   withFile "testdata.txt" ReadMode $ \handle -> do
+    contents <- hGetContents handle
+    let testStrings = lines contents
+        results = map (fromRight . find parseDate) testStrings
+        rs = zip [1..] results
+        rs' = filter (\(_,x) -> x /= " ::: ") rs
+        c = length rs'
+    mapM (putStrLn . show) rs'
+    putStrLn . show $ c
+
+entire = withFile "testdata.txt" ReadMode $ \handle -> do
     contents <- hGetContents handle
     let testStrings = lines contents
         results = map (find parseDate) testStrings
         rs = zip [1..] results
     mapM (putStrLn . show) rs
+
+dayOfWeek = withFile "testdata.txt" ReadMode $ \handle -> do
+    withFile "testdata.txt" ReadMode $ \handle -> do
+    contents <- hGetContents handle
+    let testStrings = (map . map) toLower $ lines contents
+        results = map (fromRight . find parseWeekday) testStrings
+        rs = zip [1..] results
+        rs' = filter (\(_,x) -> x /= " ::: ") rs
+        c = length rs'
+    mapM (putStrLn . show) rs'
+    putStrLn . show $ c
+
+main = dayOfWeek
