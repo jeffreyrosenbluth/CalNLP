@@ -36,7 +36,7 @@ instance Semigroup ParseError where
 -- Utility functions ----------------------------------------------------------
 
 delim :: Parser ()
-delim = (skipMany1 punc <* spaces) <|> eof
+delim = skipMany1 punc <|> eof
 
 punc :: Parser Char
 punc = char ',' <|> char '.' <|> space
@@ -182,7 +182,7 @@ parseDateN = try $ do
 
 -- Full Parsers ---------------------------------------------------------------
 
--- | Parse a full date. 'parseDateN' must come before 'parseDateB'
+-- | Parse a full date.
 parseDate :: Parser Date
 parseDate = parseDateA <|> parseDateB <|> parseDateN
 
@@ -209,7 +209,6 @@ entire = withFile "testdata.txt" ReadMode $ \handle -> do
     mapM (putStrLn . show) rs
 
 dayOfWeek = withFile "testdata.txt" ReadMode $ \handle -> do
-    withFile "testdata.txt" ReadMode $ \handle -> do
     contents <- hGetContents handle
     let testStrings = (map . map) toLower $ lines contents
         results = map (fromRight . find parseWeekday) testStrings
@@ -219,4 +218,4 @@ dayOfWeek = withFile "testdata.txt" ReadMode $ \handle -> do
     mapM (putStrLn . show) rs'
     putStrLn . show $ c
 
-main = dayOfWeek
+main = entire
